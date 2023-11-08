@@ -4,7 +4,13 @@ For more information on data structures and algorithms, consider referring to
 SZWARCFITER, Jayme Luiz; MARKENZON, Lilian. Estruturas de dados e seus algoritmos.
 3.ed. Rio de Janeiro, RJ: LTC, 2010. 302 p. ISBN 978-85-216-1750-1.
 """
-from node import Node
+
+
+class Node:
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 
 
 class Queue:
@@ -12,6 +18,7 @@ class Queue:
 
     The queue follows the First In, First Out (FIFO) principle.
     """
+
     def __init__(self):
         """Initialize an empty queue.
 
