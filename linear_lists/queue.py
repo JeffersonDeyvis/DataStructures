@@ -6,12 +6,6 @@ SZWARCFITER, Jayme Luiz; MARKENZON, Lilian. Estruturas de dados e seus algoritmo
 """
 from linear_lists.node import Node
 
-# class Node:
-#
-#     def __init__(self, value):
-#         self.value = value
-#         self.next = None
-
 
 class Queue:
     """Class representing a queue data structure.
