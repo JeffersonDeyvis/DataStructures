@@ -6,7 +6,6 @@ SZWARCFITER, Jayme Luiz; MARKENZON, Lilian. Estruturas de dados e seus algoritmo
 """
 from node import Node
 
-
 class Stack:
     """Class representing a stack data structure.
 
@@ -34,7 +33,7 @@ class Stack:
         """Add an element to the top of the stack.
         """
         node = Node(element)
-        node.previous = self.top
+        node.next = self.top
         self.top = node
         self._size += 1
 
@@ -50,7 +49,7 @@ class Stack:
         is_empty = self.empty()
         if not is_empty:
             node = self.top
-            self.top = self.top.previous
+            self.top = self.top.next
             self._size -= 1
             return node.value
 
@@ -77,5 +76,5 @@ class Stack:
         pointer = self.top
         while pointer:
             stack_representation += str(pointer.value) + "\n"
-            pointer = pointer.previous
+            pointer = pointer.next
         return stack_representation
