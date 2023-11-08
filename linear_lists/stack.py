@@ -1,4 +1,8 @@
 """Module providing a stack data structure implementation in Python.
+
+For more information on data structures and algorithms, consider referring to
+SZWARCFITER, Jayme Luiz; MARKENZON, Lilian. Estruturas de dados e seus algoritmos.
+3.ed. Rio de Janeiro, RJ: LTC, 2010. 302 p. ISBN 978-85-216-1750-1.
 """
 from node import Node
 
