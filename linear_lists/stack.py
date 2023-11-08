@@ -1,24 +1,49 @@
+"""Module providing a stack data structure implementation in Python.
+"""
 from node import Node
 
 
 class Stack:
+    """Class representing a stack data structure.
 
+    The stack follows the Last In, First Out (LIFO) principle.
+    """
     def __init__(self):
-        """attributes : top and size"""
+        """Initialize an empty stack.
+
+        The stack is represented using the attributes top and size.
+        The top attribute points to the top element of the stack.
+        The size attribute keeps track of the number of elements in the stack.
+        """
         self.top = None
         self._size = 0
 
-    def stack_empty(self):
+    def empty(self):
+        """Check if the stack is empty.
+
+        Returns:
+            bool: True if the stack is empty, False otherwise.
+        """
         return self._size == 0
 
-    def stack_push(self, element):
+    def push(self, element):
+        """Add an element to the top of the stack.
+        """
         node = Node(element)
         node.previous = self.top
         self.top = node
         self._size += 1
 
-    def stack_pop(self):
-        is_empty = self.stack_empty()
+    def pop(self):
+        """Remove and return the top element from the stack.
+
+        Returns:
+            The value of the removed element.
+
+        Raises:
+            IndexError: If the stack is empty.
+        """
+        is_empty = self.empty()
         if not is_empty:
             node = self.top
             self.top = self.top.previous
@@ -27,16 +52,26 @@ class Stack:
 
         raise IndexError("The stack is empty")
 
-    def stack_peek(self):
-        is_empty = self.stack_empty()
+    def peek(self):
+        """Return the top item from the stack without removing it.
+
+        Raises:
+            IndexError: If the stack is empty.
+        """
+        is_empty = self.empty()
         if not is_empty:
             return self.top.value
         raise IndexError("the stack is empty")
 
     def __repr__(self):
+        """Return a string representation of the stack.
+
+        Returns:
+            str: A string representing the elements in the stack.
+        """
         stack_representation = ""
         pointer = self.top
         while pointer:
-            stack_representation += str(pointer.data) + "\n"
+            stack_representation += str(pointer.value) + "\n"
             pointer = pointer.previous
         return stack_representation
