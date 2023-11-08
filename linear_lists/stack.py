@@ -4,13 +4,13 @@ For more information on data structures and algorithms, consider referring to
 SZWARCFITER, Jayme Luiz; MARKENZON, Lilian. Estruturas de dados e seus algoritmos.
 3.ed. Rio de Janeiro, RJ: LTC, 2010. 302 p. ISBN 978-85-216-1750-1.
 """
+from linear_lists.node import Node
 
-
-class Node:
-
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+# class Node:
+#
+#     def __init__(self, value):
+#         self.value = value
+#         self.next = None
 
 
 class Stack:
